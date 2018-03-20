@@ -1,6 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from "react-dom";
+import ContainerProductos from "./componentes/ContainerProductos";
 
-const App = ({ message }) => <div>{ message }</div>;
+const App = () => <div><ContainerProductos/></div>;
 
-ReactDOM.render(<App message="hello world" />, document.getElementById('app'));
+
+render(
+<App></App>, document.getElementById('app'));
