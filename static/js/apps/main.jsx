@@ -2,8 +2,7 @@ import React from 'react';
 import { render } from "react-dom";
 import ContainerProductos from "./componentes/ContainerProductos";
 
-const App = () => <div><ContainerProductos/></div>;
+const App = () => <div id="contenedorProductos"><div className="container"><ContainerProductos/></div></div>;
 
 
-render(
-<App></App>, document.getElementById('app'));
+render(<App/>, document.getElementById('app'));

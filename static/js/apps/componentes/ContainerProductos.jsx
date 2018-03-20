@@ -1,27 +1,32 @@
 import React, { Component } from "react";
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  Card, Button, CardImg, CardTitle, CardText, CardDeck,
+  CardSubtitle, CardBody
 } from 'reactstrap';
 const mock = require('./../../../../data/mock.json');
+
+
 
 class ContainerProductos extends Component {
   
   render() { 
     return (
-      <div className="container">
-        <div className="row">
-        {
-          mock.catalog.map((producto) => {
-              return <div className="col-md-2" id={producto.id} key={producto.id}>
-                      <img src={producto.imageURL} />
-                      <h5>{producto.name}</h5>
-                      <p>{producto.price}</p>
-                  </div>;
-          })
-        }
-        </div>
-      </div>
+        <CardDeck>
+          {
+            mock.catalog.map((producto) => {
+              return  <Card className="test" id={producto.id} key={producto.id}>
+                        <CardImg src={producto.imageURL} alt="Card image cap" />
+                        <CardBody>
+                          <CardTitle>Card title</CardTitle>
+                          <CardSubtitle>{producto.name}</CardSubtitle>
+                          <CardText>${producto.price}</CardText>
+                          <Button color="danger">Agregar</Button>
+                        </CardBody>
+                      </Card>
+                      ;
+            })
+          }
+        </CardDeck>
     ); 
   }
 }

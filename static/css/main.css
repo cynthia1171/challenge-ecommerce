@@ -1,1 +1,52 @@
 /* you can add any styles you think could improve user's experience */
+#contenedorProductos {
+  background-color: blanchedalmond;
+  padding: 10px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+
+.test {
+  display: inline-block;
+  margin: 20px;
+}
+
+button {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: rgb(88, 2, 81);
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+}
